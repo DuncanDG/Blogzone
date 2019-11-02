@@ -105,7 +105,7 @@ public class PostActivity extends AppCompatActivity {
         post.setDescription(pdescription.getText().toString());
         if (post.getId() == null){
             databaseRef.child("posts").push().setValue(post);
-            Toast.makeText(PostActivity.this, "Post saved", Toast.LENGTH_LONG).show();
+            Toast.makeText(PostActivity.this, "Post saved successfully", Toast.LENGTH_LONG).show();
         } else {
             databaseRef.child("posts").child(post.getId()).setValue(post);
             Toast.makeText(PostActivity.this, "Post saved", Toast.LENGTH_LONG).show();
@@ -168,30 +168,7 @@ public class PostActivity extends AppCompatActivity {
 
 
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (requestCode == GALLERY_REQUEST_CODE && resultCode == RESULT_OK){
-//            Uri uri = data.getData();
-//            final StorageReference filepath = storage.child("post_images").child(uri.getLastPathSegment());
-//            filepath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                @Override
-//                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                    filepath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<android.net.Uri>() {
-//                        @Override
-//                        public void onSuccess(android.net.Uri uri) {
-//                            S
-//                        }
-//                    });
-//
-//                    Toast.makeText(PostActivity.this, "Successfully Uploaded", Toast.LENGTH_SHORT).show();
-//                    final DatabaseReference newPost = databaseRef.push();
-//
-//                    //adding post contents to database reference
-//                }
-//            });
-//        }
-//    }
+
 
 //    @Override
 //    public void onStart() {
