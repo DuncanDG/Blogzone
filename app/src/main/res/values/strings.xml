@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BlogZone</string>
+    <string name="post_title">Post Title</string>
+    <string name="post_description">Post Description</string>
+</resources>

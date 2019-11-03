@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+//create and configure build types in this block
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.dunteh.blogzone"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            //=========These are proguard rules=======
+            // proguard is a free java class file shrinker optimizer.it removes and detects unused classes
+            //fields methods and attributes.it optimizes bytecode and removes unused instructions
+            // && makes your APK difficult to reverse engineer
+
+            //it is an obfuscator shortens the name of classes and members
+            //enables code shrinking obfuscation and optimization for only ur project's release build type
+            //optimization helps ake ur app smaller and run faster
+            minifyEnabled false
+
+            //enables resource shrinking which is performed by the android gradle plugin
+            shrinkResources false
+
+
+            //below includes the default proguard rules files settings from the android sdk tools/proguard
+            //packaged with the android gradle plugin
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }  //write your own ruless here
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    //the firebase sdk and you can add any other firebase sdks
+    //implementation 'com.google.firebase:firebase-storage:16.0.4 / 17.2.0'
+    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+    implementation 'com.google.firebase:firebase-database:19.2.0'
+    implementation 'com.google.firebase:firebase-storage:19.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+}
+
+apply plugin: 'com.google.gms.google-services'

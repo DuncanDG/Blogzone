@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "474776912124",
+    "firebase_url": "https://blogzone-dunteh01.firebaseio.com",
+    "project_id": "blogzone-dunteh01",
+    "storage_bucket": "blogzone-dunteh01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474776912124:android:f8f2f1f91866ab58241779",
+        "android_client_info": {
+          "package_name": "com.dunteh.blogzone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474776912124-pr5mdhri5qljbu17hrpbof3n6f6ljeti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGmku61t8iy4rFd4GkHx8QJWcLWbOaj4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474776912124-pr5mdhri5qljbu17hrpbof3n6f6ljeti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
